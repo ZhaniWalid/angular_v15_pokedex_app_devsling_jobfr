@@ -31,7 +31,7 @@ When refreshing the welcome page that is automatically redirected from this path
   "glob": "_redirects",
   "input": "src",
   "output": "/"
-}, in the "angular.json" file to solve the problem.
+}, in the "angular.json" file, under this Object's path "projects.architect.build.options.assets", to solve the problem.
 
 Thanks to the answer in this link: [angular-routing-not-working-on-netlify-on-refresh-welcome-page](https://stackoverflow.com/questions/51887581/angular-routing-not-working-on-netlify-on-page-refresh)
 
