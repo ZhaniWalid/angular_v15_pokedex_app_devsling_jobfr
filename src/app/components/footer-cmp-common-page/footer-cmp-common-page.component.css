@@ -1,0 +1,28 @@
+.footer {
+    /* padding: 3em 0;
+    margin-top: 4em; */
+    text-align: center;
+}
+
+.footer__link {
+    font-size: 1.05rem;
+    /* 0.9rem; */
+    font-weight: 600;
+    color: rebeccapurple;
+}
+
+/* To Configure the Components on 'Mobile Portrait View' with 'max-width: 1024px' */
+/* @media screen and (max-width: 1024px) and (orientation : portrait) {
+    .footer {
+        padding: 2em;
+        margin-top: 3em;
+    }
+} */
+
+/* To Configure the Components on 'Mobile Landscape View' with 'max-width: 1024px' */
+/* @media screen and (max-width: 1024px) and (orientation : landscape) {
+    .footer {
+        padding: 2em;
+        margin-top: 3em;
+    }
+} */

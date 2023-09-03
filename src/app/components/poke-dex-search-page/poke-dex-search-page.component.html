@@ -1,0 +1,40 @@
+<div class="Step1SearchForm"
+    style="width: 1440px; height: 1024px; background: #E6E6E6; justify-content: center; align-items: center; display: inline-flex">
+    <div class="Form" style="width: 1440px; height: 1024px; position: relative">
+        <img alt="" class="Image1" style="width: 127%; height: 1024px; left: 0px; top: 0px; position: absolute"
+            src="/assets/images/pika-pika-pikatchewww.png" />
+        <div class="Container"
+            style="width: 427.71px; height: 362px; left: 506px; top: 331px; position: absolute; flex-shrink: 0; background: white; border-radius: 10px; border: 1px #595854 solid">
+        </div>
+        <div class="Search" style="width: 304.97px; height: 91.74px; left: 567.99px; top: 476.05px; position: absolute">
+            <div class="PokemonNameOrId"
+                style="width: 188.44px; height: 23.55px; left: 0px; top: 0px; position: absolute; color: #767676; font-size: 16px; font-family: Roboto; font-weight: 700; word-wrap: break-word">
+                Pokemon Name or Id</div>
+
+            <input #textInputRef type="text" class="Rectangle2" placeholder="Put a Pokemon Name or ID"
+                style="width: 304.97px; height: 59.51px; left: -0px; top: 32.23px; position: absolute; background: #FAFAFA; border-radius: 5px; border: 0.50px #CFC7C2 solid" />
+        </div>
+        <img alt="" class="Pokeball"
+            style="width: 94.22px; height: 92.98px; left: 673.36px; top: 366.95px; position: absolute"
+            src="/assets/images/pokeball.png" />
+        <div class="SearchBtn"
+            style="width: 116.53px; height: 44.63px; left: 567.99px; top: 602.50px; position: absolute">
+            <button class="Rectangle4"
+                style="width: 116.53px; height: 44.63px; left: 0px; top: 0px; position: absolute; background: #FE5858; color: white; font-size: 16px; font-family: Roboto; font-weight: 700; border-radius: 5px; word-wrap: break-word"
+                (click)="doSearchPokemonByNameOrId(textInputRef.value)">
+                Search
+            </button>
+        </div>
+        <div class="RandomBtn"
+            style="width: 116.53px; height: 44.63px; left: 756.42px; top: 602.50px; position: absolute">
+            <div class="Rectangle5"
+                style="width: 116.53px; height: 44.63px; left: 0px; top: 0px; position: absolute; background: #FE5858; border-radius: 5px">
+            </div>
+            <button class="Rectangle5"
+                style="width: 116.53px; height: 44.63px; left: 0px; top: 0px; position: absolute; background: #FE5858; color: white; font-size: 16px; font-family: Roboto; font-weight: 700; border-radius: 5px; word-wrap: break-word"
+                (click)="doRandomSearchPokemonById()">
+                Random
+            </button>
+        </div>
+    </div>
+</div>

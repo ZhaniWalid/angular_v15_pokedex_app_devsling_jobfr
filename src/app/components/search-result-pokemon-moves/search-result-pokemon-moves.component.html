@@ -1,0 +1,18 @@
+<div class="pokemon-moves-container">
+    <div class="Movecell"
+        style="width: 375px; height: 75px; justify-content: center; align-items: center; display: inline-flex"
+        *ngFor="let pokeMove of pokeMovesWithNamesFormatArrSortAsc">
+        <div class="Pokemoncell" style="width: 375px; height: 75px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; 
+            left: -100px">
+            <div class="Rectangle6" style="width: 375px; height: 75px; background: #FAFAFA"></div>
+            <div class="Tackle"
+                style="width: 197px; color: #4F4F4F; font-size: 19px; font-family: Abel; font-weight: 400; word-wrap: break-word; text-align: start;">
+                {{ pokeMove.moveName }} </div>
+            <div class="Level1"
+                style="width: 197px; color: #A4A4A4; font-size: 15px; font-family: Abel; font-weight: 400; word-wrap: break-word; text-align: start;">
+                Level {{ pokeMove.moveLvl }}</div>
+            <div class="Rectangle6Copy"
+                style="width: 600px; height: 1px; background: #E3E3E3; border: 1px solid; margin-top: 2.5px;"></div>
+        </div>
+    </div>
+</div>

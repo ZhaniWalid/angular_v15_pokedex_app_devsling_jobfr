@@ -1,0 +1,105 @@
+
+<div class="Stats" style="width: 375px; height: 165px; position: relative">
+    <div class="Rectangle8"
+        style="width: 375px; height: 165px; left: 0px; top: 0px; position: absolute; background: #FAFAFA"></div>
+    <div class="Group2" style="width: 309px; height: 138px; left: 33px; top: 14px; position: absolute">
+        
+        <div class="progress-bar-container">
+            <div class="Hp"
+            style="width: 30px; left: 0px; top: 0px; position: absolute; color: #5DBE62; font-size: 12px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsTitles[0] }}</div> <!-- HP -->
+            
+            <div
+            style="width: 30px; left: 31px; top: 0px; position: absolute; text-align: right; color: #666666; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsProps.hp }}</div>
+        
+        
+            <div class="progress-bar">
+                <span class="percentage hp" [ngStyle]="{'background-color': backgroundColorProps, 'width.%': pokemonStatsProps.hp }"></span>
+            </div>
+        </div>
+
+        
+
+        <div class="progress-bar-container">
+            <div class="Atk"
+            style="width: 30px; left: 0px; top: 24px; position: absolute; color: #5DBE62; font-size: 12px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsTitles[1] }}</div> <!-- ATK -->
+            
+            <div
+            style="width: 30px; left: 31px; top: 22.5px; position: absolute; text-align: right; color: #666666; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsProps.attack }}</div>
+        
+            <div class="progress-bar" style="top: -38px;">
+                <span class="percentage attack" [ngStyle]="{'background-color': backgroundColorProps, 'width.%': pokemonStatsProps.attack }"></span>
+            </div>
+        </div>
+
+
+        
+
+        <div class="progress-bar-container">
+            <div class="Def"
+            style="width: 30px; left: 0px; top: 47px; position: absolute; color: #5DBE62; font-size: 12px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsTitles[2] }}</div> <!-- DEF -->
+            <div
+            style="width: 30px; left: 31px; top: 45px; position: absolute; text-align: right; color: #666666; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsProps.defense }}</div>
+        
+        
+            <div class="progress-bar" style="top: -75.5px;">
+                <span class="percentage attack" [ngStyle]="{'background-color': backgroundColorProps, 'width.%': pokemonStatsProps.defense }"></span>
+            </div>
+        </div>
+
+        
+
+        <div class="progress-bar-container">
+            <div class="Satk"
+            style="width: 30px; left: 0px; top: 72px; position: absolute; color: #5DBE62; font-size: 12px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsTitles[3] }}</div> <!-- SATK -->
+            
+            <div
+            style="width: 30px; left: 31px; top: 70.5px; position: absolute; text-align: right; color: #666666; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsProps.specialAttack }}</div>
+                    
+            <div class="progress-bar" style="top: -110px;">
+                <span class="percentage attack" [ngStyle]="{'background-color': backgroundColorProps, 'width.%': pokemonStatsProps.specialAttack }"></span>
+            </div>
+        </div>
+
+
+        
+
+        <div class="progress-bar-container">
+            <div class="Sdef"
+            style="width: 30px; left: 0px; top: 96px; position: absolute; color: #5DBE62; font-size: 12px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsTitles[4] }}</div> <!-- SDEF -->
+            
+            <div
+            style="width: 30px; left: 31px; top: 96px; position: absolute; text-align: right; color: #666666; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsProps.specialDefense }}</div>
+                
+            <div class="progress-bar" style="top: -145px;">
+                <span class="percentage attack" [ngStyle]="{'background-color': backgroundColorProps, 'width.%': pokemonStatsProps.specialDefense }"></span>
+            </div>
+        </div>
+
+        
+
+        <div class="progress-bar-container">
+            <div class="Spd"
+            style="width: 30px; left: 0px; top: 120px; position: absolute; color: #5DBE62; font-size: 12px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsTitles[5] }}</div> <!-- SPD -->
+            
+            <div
+            style="width: 30px; left: 31px; top: 118.5px; position: absolute; text-align: right; color: #666666; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+            {{ pokemonStatsProps.speed }}</div>
+                    
+            <div class="progress-bar" style="top: -182px;">
+                <span class="percentage attack" [ngStyle]="{'background-color': backgroundColorProps, 'width.%': pokemonStatsProps.speed }"></span>
+            </div>
+        </div>
+        
+    </div>
+</div>

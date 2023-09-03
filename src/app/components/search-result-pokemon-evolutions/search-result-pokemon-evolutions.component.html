@@ -1,0 +1,38 @@
+<!-- 'right.px' => <property>.<units>: value (without units) -->
+<!-- loop over the collection of "pokemonEvolArr" -->
+<div class="Evolutions" style="width: 647px; height: 172px; position: relative"
+        [ngStyle]="{'right.px': rightPropCssDiv}"
+>   
+    <div *ngFor="let leftArrowValProp of leftArrowPropsArr">
+        <div class="Group2" style="width: 94px; height: 8px; position: relative; top: 70px;" [ngStyle]="{'left.px': leftArrowValProp}">
+            <div class="Path8" style="width: 93.04px; height: 2px; left: 0px; top: 3px; position: absolute" [ngStyle]="{border: borderColorVolumeArrow}"></div>
+            <div class="Path8" style="width: 5px; height: 4px; left: 89px; top: 0px; position: absolute" [ngStyle]="{border: borderColorVolumeArrow}"></div>
+            <div class="Path8" style="width: 5px; height: 4px; left: 89px; top: 4px; position: absolute" [ngStyle]="{border: borderColorVolumeArrow}"></div>
+        </div>
+    </div>
+    <div *ngIf="pokemonEvolArr.length > 0; else PokemonEvoArrEmpty">
+        <div *ngFor="let pokemonEvoEl of pokemonEvolArr">     
+            <div class="Ivysaur"
+                style="top: 126px; position: absolute; text-align: center; color: black; font-size: 22px; font-family: Abel; font-weight: 400; word-wrap: break-word"
+                [ngStyle]="{'left.px': pokemonEvoEl.cssProps.leftPropsDivName}"
+            >
+                <!-- the Angular "titlecase" pipe => Will convert the first letter of each word
+                        to uppercase and remaining letters to lowercase. -->
+                {{ pokemonEvoEl.name | titlecase }} (#{{ pokemonEvoEl.evolutionLvl }})
+            </div>
+            <img alt="" class="Image2" style="width: 107px; height: 107px; top: 7px; position: absolute"
+                [ngStyle]="{'left.px': pokemonEvoEl.cssProps.leftPropsDivImage}" 
+                src="{{ pokemonEvoEl.pokemonImgUrl }}" />
+        </div>
+    </div>
+    <!-- < ng-template > => Is “virtual” means that < ng-template > contents won’t actually exist in the compiled DOM,
+                    until it’s needed (you will never see it until Angular renders it).
+                    ==> That means until "pokemonEvolArr.length =< 0" is true, then this msg "No Pokemon Evolutions Has Been Found."
+                        will be shown. -->
+   <ng-template #PokemonEvoArrEmpty>
+        <div>
+            No Pokemon Evolutions Has Been Found.
+        </div>       
+   </ng-template>
+    
+</div>

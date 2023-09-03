@@ -1,0 +1,121 @@
+<!-- <div style="width: 1440px; height: 1024px; position: relative; background: #5DBE62"> -->
+<div style="height: 1024px; position: relative" [ngStyle]="{background: backgroundColor}">
+<div class="Path" style="width: 39px; height: 67px; left: 69px; top: 126px; position: absolute;">
+  <a routerLink="">
+    <svg xmlns="http://www.w3.org/2000/svg" width="39" height="67" viewBox="0 0 39 67" fill="none">
+      <path
+        d="M11.7693 33.5L37.5721 8.16973C39.476 6.30079 39.476 3.27064 37.5721 1.4017C35.6683 -0.467235 32.5817 -0.467235 30.6779 1.4017L1.42785 30.116C-0.475952 31.9849 -0.475952 35.0151 1.42785 36.884L30.6779 65.5983C32.5817 67.4672 35.6683 67.4672 37.5721 65.5983C39.476 63.7294 39.476 60.6992 37.5721 58.8303L11.7693 33.5Z"
+        fill="#FAFAFA" />
+    </svg>
+  </a>
+</div>
+<div style="width: 1196px; height: 880px; left: 312.5px; top: 144px; position: absolute">
+  <div style="width: 1196px; height: 880px; left: 0px; top: 0px; position: absolute">
+    <div
+      style="width: 1196px; height: 795px; left: 0px; top: 85px; position: absolute; background: #FAFAFA; border-top-left-radius: 48px; border-top-right-radius: 48px">
+    </div>
+    <div *ngIf="pokemon !== undefined">
+      <img alt="" style="width: 170px; height: 170px; left: 513px; top: 0px; position: absolute"
+        src="{{ pokemon.sprites.other.home.front_default }}" />
+    </div>
+    
+    <div *ngIf="pokemon !== undefined">
+      <div
+        style="width: 335px; left: 430px; top: 170px; position: absolute; text-align: center; color: #4F4F4F; font-size: 40px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+        <!-- the Angular "titlecase" pipe => Will convert the first letter of each word
+                to uppercase and remaining letters to lowercase. -->
+        {{ pokemon.name | titlecase }}
+      </div>
+    </div>
+
+    <!-- loop over the collection of "typesPerPokemon" -->
+    <div *ngFor="let pokemonType of typesPerPokemon"
+      style="width: 401px; height: 60px; left: 397px; top: 221px; position: absolute">
+
+      <!-- 'left.px' => <property>.<units>: value (without units) -->
+      <div style="width: 206.37px; height: 40px; top: 25px; position: absolute; border-radius: 19.31px"
+        [ngStyle]="{'left.px': pokemonType.leftCssPropBtns, background: backgroundColor, 'box-shadow': backgroundColor}">
+
+        <div
+          style="width: 99px; left: 53px; top: 11.51px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word"
+          [ngStyle]="{background: backgroundColor}">
+          <!-- the Angular "uppercase" pipe => WIt will convert the whole word to uppercase. -->
+          {{ pokemonType.type.name | uppercase }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div
+    style="width: 972px; left: 112px; top: 328px; position: absolute; text-align: center; color: #4F4F4F; font-size: 18px; font-family: Abel; font-weight: 400; word-wrap: break-word">
+    {{ pokemonDescription }}
+  </div>
+  <div style="width: 710px; height: 75px; left: 242px; top: 408px; position: absolute">
+    <div style="width: 710px; height: 75px; left: 0px; top: 0px; position: absolute; background: #FAFAFA"></div>
+    <div
+      style="width: 609.65px; height: 40px; left: 45.44px; top: 18px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+      
+      <a (click)="onTabStatsClicked()">
+        <div style="width: 206.37px; height: 40px; left: 0px; top: 0px; position: absolute; border-radius: 19.31px"
+          [ngStyle]="{background: backgroundColor, 'box-shadow': backgroundColor}">
+          <div 
+            id="stats-tab"
+            style="width: 99px; left: 53px; top: 11.51px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word"
+            [ngStyle]="{background: backgroundColor}">
+            {{ pokemonMenuTabs[0] }} <!-- STATS -->
+          </div>
+        </div>
+      </a>
+
+      <a (click)="onTabEvolutionsClicked()">
+        <div
+          style="width: 206.37px; height: 40px; left: 300px; top: 0px; position: absolute; border-radius: 19.31px; padding-right: 5px;"
+          [ngStyle]="{background: backgroundColor, 'box-shadow': backgroundColor}">
+
+          <div 
+            id="evolutions-tab"
+            style="width: 99px; left: 53px; top: 11.51px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word"
+            [ngStyle]="{background: backgroundColor}">
+            {{ pokemonMenuTabs[1] }} <!-- EVOLUTIONS -->
+          </div>
+
+        </div>
+      </a>
+
+      <a (click)="onTabMovesClicked()">
+        <div
+          style="width: 206.37px; height: 40px; left: 600px; top: 0px; position: absolute; border-radius: 19.31px; padding-right: 5px;"
+          [ngStyle]="{background: backgroundColor, 'box-shadow': backgroundColor}">
+
+          <div
+            id="moves-tab"
+            style="width: 99px; left: 53px; top: 11.51px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Abel; font-weight: 400; word-wrap: break-word"
+            [ngStyle]="{background: backgroundColor}">
+            {{ pokemonMenuTabs[2] }} <!-- MOVES -->
+          </div>
+
+        </div>
+      </a>
+
+    </div>
+  </div>
+  <!-- <div style="width: 39px; height: 67px; left: 122px; top: 77px; position: absolute; background: #FAFAFA"></div> -->
+  <div style="width: 375px; height: 165px; left: 400px; top: 500px; position: absolute">
+    <div style="width: 375px; height: 165px; left: 0px; top: 0px; position: absolute; background: #FAFAFA"></div>
+    <div [ngSwitch]="whichComponentToLoad"
+      style="width: 309px; height: 138px; left: 33px; top: 14px; position: absolute">
+
+      <app-search-result-pokemon-stats *ngSwitchCase="0" [pokemonStatsProps]="pokemonStats"
+        [backgroundColorProps]="backgroundColor"></app-search-result-pokemon-stats>
+
+      <app-search-result-pokemon-evolutions *ngSwitchCase="1" [backgroundColorPropsEvolArrow]="backgroundColor"
+        [pokemonIdProps]="pokemonIdAsParentProp"></app-search-result-pokemon-evolutions>
+
+      <app-search-result-pokemon-moves *ngSwitchCase="2"
+        [pokemonMovesArrSortAscProps]="pokemonMovesArrSortedAsc"></app-search-result-pokemon-moves>
+
+    </div>
+  </div>
+
+</div>

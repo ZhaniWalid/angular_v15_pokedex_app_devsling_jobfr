@@ -1,0 +1,11 @@
+.pokemon-moves-container {
+    width: 600px;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center; 
+    left: -135px;
+    position: relative;
+
+    /* padding: 20px; */
+}
